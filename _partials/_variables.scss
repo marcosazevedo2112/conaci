@@ -1,0 +1,16 @@
+// Fonts
+//IBM Plex Sans: https://fonts.google.com/specimen/IBM+Plex+Sans && Oxygen: https://fonts.google.com/specimen/Oxygen
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Oxygen&display=swap');
+$font-family-primary: 'IBM Plex Sans', sans-serif;
+$font-family-secondary: 'Oxygen', sans-serif;
+
+// Colors
+$color-white: #ffffff;
+$color-black: #231f20;
+$color-darkgray: #555556;
+$color-purple: #6d3769;
+$color-dark-purple: #6a2266; //Bold Text
+$color-light-purple: #e0aace;
+
+//Others
+$home-page-filter: rgba(109, 55, 105, 0.45); // $color-purple in RGB

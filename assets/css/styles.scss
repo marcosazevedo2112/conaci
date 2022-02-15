@@ -1,0 +1,24 @@
+/*
+  ###############################################
+  @Author: Marcos Paulo
+  Author-email: marcosazevedo2112@gmail.com
+  ###############################################
+*/
+
+// Reset
+@import url("../../_partials/_reset.scss");
+
+// Variables
+@import "../../_partials/variables.scss";
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Globals
+@import "../../_partials/globals.scss";
+
+// Layouts
+@import "../../_partials/_layouts/footer.scss";
+
+// Pages
+@import "../../_partials/_pages/home.scss";
