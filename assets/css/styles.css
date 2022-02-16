@@ -11189,13 +11189,33 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     padding: 1rem 1rem;
   }
 }
+footer {
+  padding: 1rem;
+  background-color: #6d3769;
+}
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+footer .container a {
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+}
+footer .container img {
+  height: 0.8rem;
+}
+
 .page-home {
   background-color: #ffffff;
 }
 .page-home .section-title {
   color: #6d3769;
   width: auto;
-  padding-top: 5rem;
+  padding: 5rem 0;
   text-align: center;
   height: min-content;
 }
@@ -11227,6 +11247,16 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 }
 .page-home .section-title.white-mode::after {
   background-color: #ffffff;
+}
+.page-home div.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 4.5rem;
+}
+.page-home div.btn-wrapper .btn-default {
+  width: 50vw;
 }
 .page-home section.banner {
   height: 100vh;
@@ -11271,7 +11301,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   position: absolute;
   z-index: 90;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(109, 55, 105, 0.45);
 }
 .page-home section.objetivos {
@@ -11284,7 +11314,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 }
 .page-home section.objetivos div.container > p {
   font-size: 1.1rem;
-  margin: 5rem 0;
+  margin-bottom: 5rem;
   color: #231f20;
 }
 .page-home section.objetivos div.container .text-card {
@@ -11308,24 +11338,13 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   text-align: center;
   color: #231f20;
 }
-.page-home section.objetivos div.container .btn-wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 5rem;
-}
-.page-home section.objetivos div.container .btn-wrapper .btn-default {
-  width: 50vw;
-}
 .page-home section.perguntas {
-  min-height: 100vh;
   background-color: #e0aace;
   margin: 0;
   padding: 0 10%;
 }
 .page-home section.perguntas .section-title {
-  margin: 2.5rem 0;
+  padding: 5rem 0;
 }
 .page-home section.perguntas div.column {
   align-items: center;
@@ -11351,15 +11370,102 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 .page-home section.perguntas div.column div.pergunta div.pergunta-wrapper p {
   color: #fff;
 }
-.page-home section.perguntas div.btn-wrapper {
+.page-home section.usuarios .section-title {
+  padding-bottom: 5rem;
+}
+.page-home section.usuarios .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.page-home section.usuarios .container .card-usuario {
+  width: 80%;
+  margin: auto;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid #e0aace;
+}
+.page-home section.usuarios .container .card-usuario img.card-usuario-foto {
+  margin-top: -5rem;
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.page-home section.usuarios .container .card-usuario h2.card-usuario-nome, .page-home section.usuarios .container .card-usuario .card-usuario-nome.h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #231f20;
+}
+.page-home section.usuarios .container .card-usuario h3.card-usuario-local, .page-home section.usuarios .container .card-usuario .card-usuario-local.h3 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #231f20;
+}
+.page-home section.usuarios .container .card-usuario p {
+  margin: 1rem auto;
+  width: 80%;
+  color: #231f20;
+}
+.page-home section.usuarios .container .card-usuario .card-usuario-ctt {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 2.5rem;
-  padding-bottom: 4.5rem;
+  margin-bottom: 1rem;
 }
-.page-home section.perguntas div.btn-wrapper .btn-default {
-  width: 50vw;
+.page-home section.usuarios .container .card-usuario .card-usuario-ctt a {
+  margin: 0.5rem;
+}
+.page-home section.usuarios .container .card-usuario .card-usuario-ctt a img {
+  height: 1.5rem;
+  width: auto;
+}
+.page-home section.cadastro {
+  overflow: hidden;
+  background-color: #e38aa9;
+}
+.page-home section.cadastro .section-title {
+  padding-bottom: 2.5rem;
+}
+.page-home section.cadastro .container form {
+  padding-bottom: 4.5rem;
+  z-index: 99;
+}
+.page-home section.cadastro .container form input[type=text], .page-home section.cadastro .container form input[type=email] {
+  border-radius: 0;
+  margin-top: 1.5rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #6d3769;
+}
+.page-home section.cadastro .container form input[type=text]::placeholder, .page-home section.cadastro .container form input[type=email]::placeholder {
+  color: #ffffff;
+  font-family: "Oxygen", sans-serif;
+}
+.page-home section.cadastro .container form input[type=submit] {
+  z-index: 99;
+  position: relative;
+  width: 70%;
+  margin: auto;
+  margin-top: 2.5rem;
+  background-image: url("../images/btn-icon.png");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 1.5rem;
+  padding: 0.4rem 1rem;
+}
+.page-home section.cadastro .container form input[type=submit]:hover {
+  color: #6d3769;
+}
+.page-home section.cadastro .container form input[type=email], .page-home section.cadastro .container form input[type=text]:focus {
+  box-shadow: none;
+}
+.page-home section.cadastro .grafismos {
+  display: none;
 }
 
 /*
@@ -11377,6 +11483,13 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   }
   .page-home .section-title::after {
     width: 7rem;
+  }
+  .page-home div.btn-wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .page-home div.btn-wrapper .btn-default {
+    width: 30vw;
   }
   .page-home section.banner {
     background-position: center left;
@@ -11414,23 +11527,38 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   .page-home section.objetivos div.container .cards .text-card img {
     margin-bottom: 1rem;
   }
-  .page-home section.objetivos div.container .btn-wrapper {
-    padding: 5rem 0;
-  }
-  .page-home section.objetivos div.container .btn-wrapper .btn-default {
-    width: 30vw;
-  }
   .page-home section.perguntas .columns-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .page-home section.perguntas .columns-wrapper .column {
-    padding: 0 1rem;
+  .page-home section.perguntas .columns-wrapper .column:first-of-type {
+    padding-right: 1rem;
   }
-  .page-home section.perguntas .btn-wrapper {
-    width: 50%;
-    margin: 0 auto;
+  .page-home section.usuarios .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .page-home section.cadastro {
+    position: relative;
+    padding-bottom: 4.5rem;
+  }
+  .page-home section.cadastro .container form {
+    width: 40vw;
+  }
+  .page-home section.cadastro .container form input[type=submit] {
+    width: 40%;
+    float: right;
+    background-position: 88% center;
+  }
+  .page-home section.cadastro .grafismos {
+    user-select: none;
+    z-index: 90;
+    display: block;
+    position: absolute;
+    bottom: -1.3rem;
+    right: 0;
+    height: 40vh;
   }
 }
 /*
@@ -11440,6 +11568,12 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 =====================================================
 */
 @media (min-width: 992px) {
+  .page-home div.btn-wrapper {
+    margin: 0 auto;
+  }
+  .page-home div.btn-wrapper .btn-default {
+    width: 15rem;
+  }
   .page-home section.banner {
     background-position: top center;
   }
@@ -11473,9 +11607,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     right: -1rem;
     transform: scale(-1);
   }
-  .page-home section.objetivos div.container .btn-wrapper .btn-default {
-    width: 15rem;
-  }
   .page-home section.perguntas .columns-wrapper {
     display: flex;
     flex-direction: row;
@@ -11487,9 +11618,15 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   .page-home section.perguntas .columns-wrapper .column .pergunta {
     padding: 2rem 0;
   }
-  .page-home section.perguntas .btn-wrapper {
-    width: 15rem;
-    margin: 0 auto;
+  .page-home section.usuarios .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .page-home section.cadastro .container form input[type=submit] {
+    background-position: 90% center;
+  }
+  .page-home section.cadastro .grafismos {
+    height: 50%;
   }
 }
 /*
@@ -11509,7 +11646,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     width: 75%;
   }
   .page-home section.objetivos .grafismos {
-    height: 15rem;
+    height: 10rem;
   }
   .page-home section.objetivos div.container .cards {
     flex-direction: row;
@@ -11521,6 +11658,17 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
   .page-home section.objetivos div.container .cards .text-card p {
     font-size: 1rem;
     text-align: start;
+  }
+  .page-home section.usuarios .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .page-home section.cadastro .container form {
+    width: 30vw;
+  }
+  .page-home section.cadastro .container form input[type=submit] {
+    width: 30%;
+    background-position: 95% center;
   }
 }
 /*

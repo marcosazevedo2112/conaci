@@ -3,7 +3,7 @@
   .section-title {
     color: $color-purple;
     width: auto;
-    padding-top: 5rem;
+    padding: 5rem 0;
     text-align: center;
     height: min-content;
     h2 {
@@ -35,6 +35,16 @@
       &::after {
         background-color: $color-white;
       }
+    }
+  }
+  div.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 4.5rem;
+    .btn-default {
+      width: 50vw;
     }
   }
   section.banner {
@@ -82,7 +92,7 @@
       position: absolute;
       z-index: 90;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: $home-page-filter;
     }
   }
@@ -96,7 +106,7 @@
     div.container {
       > p {
         font-size: 1.1rem;
-        margin: 5rem 0;
+        margin-bottom: 5rem;
         color: $color-black;
       }
       .text-card {
@@ -120,25 +130,14 @@
           color: $color-black;
         }
       }
-      .btn-wrapper {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 5rem;
-        .btn-default {
-          width: 50vw;
-        }
-      }
     }
   }
   section.perguntas {
-    min-height: 100vh;
     background-color: $color-light-purple;
     margin: 0;
     padding: 0 10%;
     .section-title{
-      margin: 2.5rem 0;
+      padding: 5rem 0;
     }
     div.column {
       align-items: center;
@@ -166,16 +165,107 @@
         }
       }
     }
-
-    div.btn-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 2.5rem;
-      padding-bottom: 4.5rem;
-      .btn-default {
-        width: 50vw;
+  }
+  section.usuarios{
+    .section-title{
+      padding-bottom: 5rem;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: 1fr;
+      
+      .card-usuario{
+        width: 80%;
+        margin: auto;
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        border-radius: 1rem;
+        border: 1px solid $color-light-purple;
+        img.card-usuario-foto{
+          margin-top: -5rem;
+          height: 10rem;
+          width: 10rem;
+          object-fit: cover;
+          border-radius: 100%;
+        }
+        h2.card-usuario-nome{
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 1rem 0;
+          color: $color-black;
+        }
+        h3.card-usuario-local{
+          font-size: 1.3rem;
+          margin: 1rem 0;
+          font-weight: bold;
+          color: $color-black;
+        }
+        p{
+          margin: 1rem auto;
+          width: 80%;
+          color: $color-black;
+        }
+        .card-usuario-ctt{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1rem;
+          a{
+            margin: 0.5rem;
+            img{
+              height: 1.5rem;
+              width: auto;
+            }
+          }
+        }
       }
+    }
+  }
+  section.cadastro{
+    .section-title{
+      padding-bottom: 2.5rem;
+    }
+    overflow: hidden;
+    background-color: $color-light-purple2;
+    .container{
+      form{
+        padding-bottom: 4.5rem;
+        z-index: 99;
+        input[type="text"], input[type="email"]{
+          border-radius: 0;
+          margin-top: 1.5rem;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid $color-purple;
+          &::placeholder{
+            color: $color-white;
+            font-family: $font-family-secondary;
+          }
+        }
+        input[type="submit"]{
+          z-index: 99;
+          position: relative;
+          width: 70%;
+          margin: auto;
+          margin-top: 2.5rem;
+          background-image: url("../images/btn-icon.png");
+          background-repeat: no-repeat;
+          background-position: 95% center;
+          background-size: 1.5rem;
+          padding: 0.4rem 1rem;
+          &:hover{
+            color: $color-purple;
+          }
+        }
+        input[type="email"], input[type="text"]:focus{
+          box-shadow: none;
+        }
+      }
+    }
+    .grafismos{  
+      display: none;
     }
   }
 }
@@ -197,6 +287,13 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
       }
       &::after {
         width: 7rem;
+      }
+    }
+    div.btn-wrapper{
+      width: 50%;
+      margin: 0 auto;
+      .btn-default{
+        width: 30vw;
       }
     }
     section.banner {
@@ -237,12 +334,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
             }
           }
         }
-        .btn-wrapper {
-          padding: 5rem 0;
-          .btn-default {
-            width: 30vw;
-          }
-        }
       }
     }
     section.perguntas{
@@ -250,13 +341,39 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        .column{
-          padding: 0 1rem;
+        .column:first-of-type{
+          padding-right: 1rem;
         }
       }
-      .btn-wrapper{
-        width: 50%;
-        margin: 0 auto;
+    }
+    section.usuarios{
+      .container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+    section.cadastro{
+      position: relative;
+      padding-bottom: 4.5rem;
+      .container{
+        
+        form{
+          width: 40vw;
+          input[type="submit"]{
+            width: 40%;
+            float: right;
+            background-position: 88% center;
+          }
+        }
+      }
+      .grafismos{
+        user-select: none;
+        z-index: 90;
+        display: block;
+        position: absolute;
+        bottom: -1.3rem;
+        right: 0;
+        height: 40vh;
       }
     }
   }
@@ -269,6 +386,12 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
 */
 @include media-breakpoint-up(lg) {
   .page-home {
+    div.btn-wrapper{
+      margin: 0 auto;
+      .btn-default{
+        width: 15rem;
+      }
+    }
     section.banner {
       background-position: top center;
       img.logo {
@@ -303,13 +426,6 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
           transform: scale(-1);
         }
       }
-      div.container {
-        .btn-wrapper {
-          .btn-default {
-            width: 15rem;
-          }
-        }
-      }
     }
     section.perguntas{
       .columns-wrapper{
@@ -323,9 +439,23 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
           }
         }
       }
-      .btn-wrapper{
-        width: 15rem;
-        margin: 0 auto;
+    }
+    section.usuarios{
+      .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+    section.cadastro{
+      .container{
+        form{
+          input[type="submit"]{
+            background-position: 90% center;
+          }
+        }
+      }
+      .grafismos{
+        height: 50%;
       }
     }
   }
@@ -353,7 +483,7 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
     }
     section.objetivos {
       .grafismos {
-        height: 15rem;
+        height: 10rem;
       }
       div.container {
         .cards {
@@ -365,6 +495,23 @@ Read more: https://getbootstrap.com/docs/5.0/layout/breakpoints/
               font-size: 1rem;
               text-align: start;
             }
+          }
+        }
+      }
+    }
+    section.usuarios{
+      .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+    section.cadastro{
+      .container{
+        form{
+          width: 30vw;
+          input[type="submit"]{
+            width: 30%;
+            background-position: 95% center;
           }
         }
       }

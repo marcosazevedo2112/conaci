@@ -1,0 +1,19 @@
+footer {
+  padding: 1rem;
+  background-color: $color-purple;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    a{
+      font-size: 0.8rem;
+      color: white;
+      text-decoration: none;
+    }
+    img{
+      height: 0.8rem;
+    }
+  }
+}
